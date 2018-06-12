@@ -51,7 +51,6 @@ int main() {
 		else if (((j % 15) == 8) || ((j % 15) == 10)) {
 			result = ((arr[j - 1 - (r * 15)] + tmp[id - (r * 15)] * 1000) + result) % mod; //이 경우에는 천의자리를 더한다.
 		}
-
 		else if (((j % 15) >= 11) && ((j % 15) <= 14)) {
 			result = ((arr[j - 1 - (r * 15)] + tmp[id - (r * 15)] * 10000) + result) % mod; //이 경우에는 만의자리를 더한다.
 		}

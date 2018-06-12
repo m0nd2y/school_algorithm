@@ -57,7 +57,7 @@ class ClockSequence():
 class Problem():
     def solve(self):
         clock_sequence = ClockSequence()
-        for n in range(1,100):
+        for n in range(1,1001):
             print(n, '=>', clock_sequence.get_sum(n))
 
 def main():

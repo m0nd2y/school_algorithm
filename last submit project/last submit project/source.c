@@ -38,9 +38,8 @@ int main() {
 			result = (arr[j - 1] + tmp[id] + result) % mod; //arr + rep + 기존의 나머지
 		}
 		checknum++;
-		printf("(%d, '=>', %lldL)\n", checknum, result);
 	}
-	for (j = 16; j <= 1000; j++) {
+	for (j = 16; j <= 985; j++) {
 		id = j;
 		tmp[id - (r * 15)] = (((tmp[id - (r * 15)] * 1000000) % mod + (rep1[j - (r * 15) - 1] % mod))) % mod; //30번째부터는 앞에서 나누었던 값을 가지고와서 long long int 안에 들어가게한다.
 		if (((j % 15) == 5) || ((j % 15) == 7)) {
@@ -66,7 +65,7 @@ int main() {
 		if (j % 15 == 0) {
 			r++;
 		}
-		printf("(%d, '=>', %lldL)\n", checknum, result);
 	}
+	printf("(%d, '=>', %lld)\n", checknum, result);
 	return 0;
 }

@@ -7,7 +7,7 @@ long long int arr[15] = { 1, 2, 3, 4, 32, 123, 43, 2123, 432, 1234, 32123, 43212
 long long int tmp[15]; //^7을 해줄때 임시적으로 저장해줄 변수
 
 int main() {
-	int checknum = 15; //디버깅용 몇바퀴돌았는지(삭제필요함)
+	int checknum = 15; //몇번 진행하였는지 알려준다.
 	const int mod = 123454321; //나눠줘야할 수
 	int i, j;
 	int r = 1; //한바퀴 돌때 이전의 값을 찾아줄 변수
@@ -39,6 +39,7 @@ int main() {
 		}
 		checknum++;
 	}
+	
 	for (j = 16; j <= 985; j++) {
 		id = j;
 		tmp[id - (r * 15)] = (((tmp[id - (r * 15)] * 1000000) % mod + (rep1[j - (r * 15) - 1] % mod))) % mod; //30번째부터는 앞에서 나누었던 값을 가지고와서 long long int 안에 들어가게한다.
